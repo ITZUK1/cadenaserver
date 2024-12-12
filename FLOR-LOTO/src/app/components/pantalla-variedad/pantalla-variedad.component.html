@@ -1,1 +1,11 @@
-<p>pantalla-variedad works!</p>
+<div class="container">
+    <div class="flower-card" *ngFor="let flor of flores">
+      <img [src]="flor.imagen" [alt]="flor.nombre">
+      <div class="card-content">
+        <h3>{{ flor.nombre }}</h3>
+        <p>{{ flor.descripcion }}</p>
+        <button (click)="verFlor(flor)">Ver más</button>
+      </div>
+    </div>
+  </div>
+  

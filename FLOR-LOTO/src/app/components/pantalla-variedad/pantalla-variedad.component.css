@@ -1,0 +1,88 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fdfcfb;
+    color: #333;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-top: 20px;
+    color: #5d4037;
+  }
+  
+  /* Contenedor principal */
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  /* Tarjetas de flores */
+  .flower-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 300px;
+    transition: transform 0.3s;
+  }
+  
+  .flower-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  /* Imagen de la flor */
+  .flower-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  /* Contenido de la tarjeta */
+  .card-content {
+    padding: 15px;
+    text-align: center;
+  }
+  
+  .card-content h3 {
+    margin: 10px 0;
+    color: #7b1fa2;
+    font-size: 1.5rem;
+  }
+  
+  .card-content p {
+    color: #757575;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
+  /* Botón de acción */
+  .card-content button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #8e24aa;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .card-content button:hover {
+    background-color: #6a1b9a;
+  }
+  
+  /* Responsivo */
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
