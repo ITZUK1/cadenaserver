@@ -7,8 +7,8 @@ import { PantallaFlorComponent } from './components/pantalla-flor/pantalla-flor.
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' }, 
   { path: 'home', component: PantallaInicioComponent },
-  { path: 'about', component: PantallaVariedadComponent },
-  { path: 'contact', component: PantallaFlorComponent },
+  { path: 'variety', component: PantallaVariedadComponent },
+  { path: 'flower', component: PantallaFlorComponent },
   { path: '**', redirectTo: '/home' } 
 ];
 
