@@ -37,11 +37,13 @@ app.use(async (req, res, next) => {
 const ColorPS = require('./routes/colorPS');
 const Familia = require('./routes/Familia');
 const Variedad = require('./routes/Variedad');
+const Flores = require('./routes/flores');
 
 
 app.use('/api', ColorPS);
 app.use('/api', Familia);
 app.use('/api', Variedad);
+app.use('/api', Flores);
 
 // Sirve los archivos estáticos de la carpeta "uploads"
 app.use('/uploads', express.static('uploads'));
