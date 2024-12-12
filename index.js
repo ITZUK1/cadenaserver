@@ -3,9 +3,6 @@ const express = require('express');
 const cors = require('cors');
 const sql = require('mssql');
 
-// Importar rutas
-const densidadesRoutes = require('./routes/densidades');
-
 // Configuración de la base de datos desde .env
 const dbConfig = {
     user: process.env.DB_USER,
@@ -37,13 +34,17 @@ app.use(async (req, res, next) => {
 });
 
 // Rutas para API
-app.use('/api', densidadesRoutes);
+const ColorPS = require('./routes/colorPS');
+app.use('/api', ColorPS);
 
 // Sirve los archivos estáticos de la carpeta "uploads"
 app.use('/uploads', express.static('uploads'));
 
 // Iniciar el servidor
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 4000;
 app.listen(PORT, () => {
     console.log(`Servidor corriendo en el puerto ${PORT}`);
 });
+
+// Exportar dbConfig después de su definición
+module.exports = dbConfig;
