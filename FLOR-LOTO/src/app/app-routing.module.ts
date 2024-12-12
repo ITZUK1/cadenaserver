@@ -5,11 +5,11 @@ import { PantallaVariedadComponent } from './components/pantalla-variedad/pantal
 import { PantallaFlorComponent } from './components/pantalla-flor/pantalla-flor.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' }, // Ruta por defecto
+  { path: '', redirectTo: '/home', pathMatch: 'full' }, 
   { path: 'home', component: PantallaInicioComponent },
   { path: 'about', component: PantallaVariedadComponent },
   { path: 'contact', component: PantallaFlorComponent },
-  { path: '**', redirectTo: '/home' } // Ruta para manejar páginas no encontradas
+  { path: '**', redirectTo: '/home' } 
 ];
 
 @NgModule({
