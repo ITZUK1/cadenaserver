@@ -1,109 +1,184 @@
-/* General styles */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f8f9fa;
-    color: #333;
-  }
-  
-  h1, h2, h3 {
-    color: #0056b3;
-  }
-  
-  /* Navigation bar */
-  nav {
-    background-color: #0056b3;
-    padding: 10px 20px;
-  }
-  
-  nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 20px;
-  }
-  
-  nav ul li a {
-    color: white;
-    text-decoration: none;
-    padding: 8px 12px;
-    border-radius: 5px;
-  }
-  
-  nav ul li a.active,
-  nav ul li a:hover {
-    background-color: #007bff;
-    color: #fff;
-  }
-  
-  /* Home component styles */
-  .home-container {
-    padding: 20px;
-    text-align: center;
-  }
-  
-  .hero {
-    background-color: #e9ecef;
-    padding: 40px 20px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-  }
-  
-  .hero h1 {
-    font-size: 2.5em;
-  }
-  
-  .hero p {
-    font-size: 1.2em;
-    margin: 20px 0;
-  }
-  
-  .hero .btn-primary {
-    background-color: #0056b3;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 1em;
-  }
-  
-  .hero .btn-primary:hover {
-    background-color: #007bff;
-  }
-  
-  /* Features section */
-  .features {
-    margin-top: 20px;
-  }
-  
-  .features h2 {
-    margin-bottom: 20px;
-  }
-  
-  .feature-list {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 20px;
-  }
-  
-  .feature-item {
-    background-color: #ffffff;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    width: 30%;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  .feature-item h3 {
-    margin-bottom: 10px;
-    font-size: 1.5em;
-  }
-  
-  .feature-item p {
-    margin: 0;
-  }
-  
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fdf5f8; /* Soft floral background */
+  color: #4a4a4a;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  color: #b22222; /* Deep floral red */
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Navigation bar */
+nav {
+  background-color: #b22222;
+  padding: 15px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1em;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+  background-color: #e57373; /* Lighter floral red */
+}
+
+/* Home component styles */
+.home-container {
+  padding: 20px;
+  text-align: center;
+}
+
+.hero {
+  background: linear-gradient(135deg, #ffefd5, #ffd1dc); /* Pastel floral tones */
+  color: #b22222;
+  padding: 50px 20px;
+  border-radius: 15px;
+  margin-bottom: 30px;
+}
+
+.hero h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.3em;
+  margin: 20px 0;
+}
+
+.hero .btn-primary {
+  background-color: #ff69b4; /* Bright floral pink */
+  color: white;
+  padding: 15px 30px;
+  text-decoration: none;
+  border-radius: 50px;
+  font-size: 1.2em;
+  transition: background-color 0.3s;
+}
+
+.hero .btn-primary:hover {
+  background-color: #ff85c5;
+}
+
+/* Features section */
+.features {
+  margin-top: 30px;
+}
+
+.features h2 {
+  margin-bottom: 20px;
+  font-size: 2.5em;
+  text-transform: uppercase;
+  color: #b22222;
+}
+
+.feature-list {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.feature-item {
+  background-color: #fffaf0; /* Floral white */
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  width: 30%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feature-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.feature-item h3 {
+  margin-bottom: 10px;
+  font-size: 1.8em;
+  color: #b22222;
+}
+
+.feature-item p {
+  margin: 0;
+}
+
+/* About section */
+.about {
+  background-color: #fff0f5; /* Lavender blush */
+  padding: 30px 20px;
+  margin: 20px 0;
+  border-radius: 15px;
+}
+
+.about h2 {
+  margin-bottom: 10px;
+  font-size: 2.3em;
+}
+
+.about p {
+  font-size: 1.2em;
+  line-height: 1.8;
+}
+
+/* Testimonials section */
+.testimonials {
+  background-color: #ffffff;
+  padding: 40px 20px;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  margin-top: 30px;
+}
+
+.testimonials h2 {
+  margin-bottom: 20px;
+  font-size: 2.5em;
+  text-align: center;
+}
+
+.testimonial-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.testimonial-item {
+  background-color: #f8e8e8; /* Soft pink */
+  padding: 20px;
+  border-radius: 15px;
+  width: 80%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.testimonial-item p {
+  margin: 0 0 10px;
+  font-style: italic;
+}
+
+.testimonial-item span {
+  font-size: 1em;
+  color: #555;
+}
