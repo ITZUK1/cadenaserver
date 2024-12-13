@@ -1,11 +1,54 @@
 <div class="container">
-    <div class="flower-card" *ngFor="let flor of flores">
-      <img [src]="flor.imagen" [alt]="flor.nombre">
-      <div class="card-content">
-        <h3>{{ flor.nombre }}</h3>
-        <p>{{ flor.descripcion }}</p>
-        <button (click)="verFlor(flor)">Ver más</button>
-      </div>
+  <div class="flower-card" *ngFor="let flor of flores">
+    <img [src]="flor.imagen" [alt]="flor.nombre">
+    <div class="card-content">
+      <h3>{{ flor.nombre }}</h3>
+      <p>{{ flor.descripcion }}</p>
+      <button (click)="verFlor(flor)">Ver más</button>
     </div>
   </div>
-  
+</div>
+
+<!-- Formulario para agregar una nueva flor -->
+<!-- Formulario para agregar una nueva flor -->
+<form (ngSubmit)="onSubmit()" #florForm="ngForm">
+  <div class="form-group">
+    <label for="nombre">Nombre de la flor</label>
+    <input type="text" id="nombre" name="nombre" [(ngModel)]="flor.nombre" required placeholder="Ejemplo: Rosa" />
+  </div>
+  <!-- Resto del formulario -->
+  <button type="submit" [disabled]="!florForm.form.valid">Enviar</button>
+</form>
+
+
+  <div class="form-group">
+    <label for="estado">Estado de la flor</label>
+    <input type="text" id="estado" name="estado" [(ngModel)]="flor.estado" required placeholder="Ejemplo: Fresca" />
+  </div>
+
+  <div class="form-group">
+    <label for="largo">Largo de la flor (cm)</label>
+    <input type="number" id="largo" name="largo" [(ngModel)]="flor.largo" required placeholder="Ejemplo: 40" />
+  </div>
+
+  <div class="form-group">
+    <label for="colorID">ID del color</label>
+    <input type="number" id="colorID" name="colorID" [(ngModel)]="flor.colorID" required placeholder="Ejemplo: 1" />
+  </div>
+
+  <div class="form-group">
+    <label for="familiaID">ID de la familia</label>
+    <input type="number" id="familiaID" name="familiaID" [(ngModel)]="flor.familiaID" required placeholder="Ejemplo: 2" />
+  </div>
+
+  <div class="form-group">
+    <label for="variedadID">ID de la variedad</label>
+    <input type="number" id="variedadID" name="variedadID" [(ngModel)]="flor.variedadID" required placeholder="Ejemplo: 3" />
+  </div>
+
+  <button type="submit" [disabled]="!florForm.form.valid">Enviar</button>
+
+
+
+  <button type="submit" [disabled]="!florForm.form.valid">Enviar</button>
+
