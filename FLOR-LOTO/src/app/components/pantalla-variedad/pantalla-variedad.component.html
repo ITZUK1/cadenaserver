@@ -1,54 +1,42 @@
-<div class="container">
-  <div class="flower-card" *ngFor="let flor of flores">
-    <img [src]="flor.imagen" [alt]="flor.nombre">
-    <div class="card-content">
+<form class="flower-form" (ngSubmit)="onSubmit()" #florForm="ngForm">
+  <h2>Nuevo Registro de Flor</h2>
+  <div class="form-group">
+    <label for="nombre">Nombre</label>
+    <input type="text" id="nombre" name="nombre" [(ngModel)]="flor.nombre" required placeholder="Nombre">
+  </div>
+  <div class="form-group">
+    <label for="estado">Estado</label>
+    <input type="text" id="estado" name="estado" [(ngModel)]="flor.estado" required placeholder="Estado">
+  </div>
+  <div class="form-group">
+    <label for="largo">Largo (cm)</label>
+    <input type="number" id="largo" name="largo" [(ngModel)]="flor.largo" required placeholder="Largo en cm">
+  </div>
+  <div class="form-group">
+    <label for="colorID">ID Color</label>
+    <input type="number" id="colorID" name="colorID" [(ngModel)]="flor.colorID" required placeholder="Color ID">
+  </div>
+  <div class="form-group">
+    <label for="familiaID">ID Familia</label>
+    <input type="number" id="familiaID" name="familiaID" [(ngModel)]="flor.familiaID" required placeholder="Familia ID">
+  </div>
+  <div class="form-group">
+    <label for="variedadID">ID Variedad</label>
+    <input type="number" id="variedadID" name="variedadID" [(ngModel)]="flor.variedadID" required placeholder="Variedad ID">
+  </div>
+  <button type="submit" [disabled]="!florForm.form.valid">Añadir Flor</button>
+</form>
+<div class="flower-list">
+  <div class="flower-item" *ngFor="let flor of flores">
+    <div class="flower-image">
+      <img [src]="flor.imagen" [alt]="flor.nombre">
+    </div>
+    <div class="flower-details">
       <h3>{{ flor.nombre }}</h3>
       <p>{{ flor.descripcion }}</p>
-      <button (click)="verFlor(flor)">Ver más</button>
+      <button (click)="verFlor(flor)">Detalles</button>
     </div>
   </div>
 </div>
 
-<!-- Formulario para agregar una nueva flor -->
-<!-- Formulario para agregar una nueva flor -->
-<form (ngSubmit)="onSubmit()" #florForm="ngForm">
-  <div class="form-group">
-    <label for="nombre">Nombre de la flor</label>
-    <input type="text" id="nombre" name="nombre" [(ngModel)]="flor.nombre" required placeholder="Ejemplo: Rosa" />
-  </div>
-  <!-- Resto del formulario -->
-  <button type="submit" [disabled]="!florForm.form.valid">Enviar</button>
-</form>
-
-
-  <div class="form-group">
-    <label for="estado">Estado de la flor</label>
-    <input type="text" id="estado" name="estado" [(ngModel)]="flor.estado" required placeholder="Ejemplo: Fresca" />
-  </div>
-
-  <div class="form-group">
-    <label for="largo">Largo de la flor (cm)</label>
-    <input type="number" id="largo" name="largo" [(ngModel)]="flor.largo" required placeholder="Ejemplo: 40" />
-  </div>
-
-  <div class="form-group">
-    <label for="colorID">ID del color</label>
-    <input type="number" id="colorID" name="colorID" [(ngModel)]="flor.colorID" required placeholder="Ejemplo: 1" />
-  </div>
-
-  <div class="form-group">
-    <label for="familiaID">ID de la familia</label>
-    <input type="number" id="familiaID" name="familiaID" [(ngModel)]="flor.familiaID" required placeholder="Ejemplo: 2" />
-  </div>
-
-  <div class="form-group">
-    <label for="variedadID">ID de la variedad</label>
-    <input type="number" id="variedadID" name="variedadID" [(ngModel)]="flor.variedadID" required placeholder="Ejemplo: 3" />
-  </div>
-
-  <button type="submit" [disabled]="!florForm.form.valid">Enviar</button>
-
-
-
-  <button type="submit" [disabled]="!florForm.form.valid">Enviar</button>
-
+<!-- Redesigned Add Flower Form -->

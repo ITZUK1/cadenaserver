@@ -1,115 +1,124 @@
-/* Estilo general */
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f9f9f9;
+  background: #f9f9f9;
+  color: #444;
 }
 
-/* Contenedor principal */
-.container {
+.flower-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 16px;
   justify-content: center;
+  gap: 20px;
   padding: 20px;
 }
 
-/* Tarjetas de flores */
-.flower-card {
-  background-color: #ffffff;
+.flower-item {
+  background: #fff;
+  border: 1px solid #ddd;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  max-width: 300px;
+  width: 300px;
   text-align: center;
-  transition: transform 0.3s ease;
+  transition: transform 0.2s ease;
 }
 
-.flower-card:hover {
+.flower-item:hover {
   transform: scale(1.05);
 }
 
-.flower-card img {
+.flower-image img {
   width: 100%;
-  height: auto;
+  height: 200px;
+  object-fit: cover;
 }
 
-.card-content {
-  padding: 16px;
+.flower-details {
+  padding: 15px;
 }
 
-.card-content h3 {
-  margin: 0 0 8px;
-  font-size: 1.25rem;
+.flower-details h3 {
+  margin: 10px 0;
+  font-size: 1.4em;
   color: #333;
 }
 
-.card-content p {
-  margin: 0 0 16px;
+.flower-details p {
+  margin: 10px 0;
+  font-size: 1em;
   color: #666;
 }
 
-.card-content button {
-  background-color: #ff6b6b;
-  color: #ffffff;
+.flower-details button {
+  background: #5cb85c;
+  color: #fff;
   border: none;
   border-radius: 4px;
-  padding: 10px 20px;
+  padding: 10px 15px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  font-size: 1em;
+  transition: background 0.2s ease;
 }
 
-.card-content button:hover {
-  background-color: #ff4c4c;
+.flower-details button:hover {
+  background: #4cae4c;
 }
 
-/* Estilos del formulario */
-form {
+.flower-form {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   max-width: 500px;
   margin: 20px auto;
   padding: 20px;
-  background-color: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.flower-form h2 {
+  margin-bottom: 15px;
+  font-size: 1.5em;
+  color: #333;
 }
 
 .form-group {
-  margin-bottom: 16px;
+  margin-bottom: 25px;
+  background: #806d6d1c;
 }
 
 .form-group label {
   display: block;
-  font-weight: bold;
-  margin-bottom: 8px;
-  color: #333;
+  margin-bottom: 5px;
+  font-size: 1em;
+  color: #555;
 }
 
 .form-group input {
   width: 100%;
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid #ddd;
   border-radius: 4px;
-  font-size: 1rem;
+  font-size: 1em;
 }
 
 button[type="submit"] {
-  width: 100%;
-  background-color: #4caf50;
-  color: #ffffff;
+  background: #0275d8;
+  color: #fff;
   border: none;
   border-radius: 4px;
-  padding: 12px;
-  font-size: 1rem;
+  padding: 10px 15px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  font-size: 1em;
+  width: 100%;
+  transition: background 0.2s ease;
 }
 
 button[type="submit"]:hover {
-  background-color: #45a049;
+  background: #025aa5;
 }
 
 button[disabled] {
-  background-color: #cccccc;
+  background: #ccc;
   cursor: not-allowed;
 }
