@@ -43,4 +43,23 @@
   </div>
 </div>
 
+<!-- Modal de detalles de la flor -->
+<div class="modal" *ngIf="florSeleccionada">
+  <div class="modal-content">
+    <span class="close" (click)="cerrarModal()">&times;</span>
+    <h2>{{ florSeleccionada.nombre }}</h2>
+    <img [src]="florSeleccionada.imagen" [alt]="florSeleccionada.nombre" class="modal-image">
+    <div class="flower-info">
+      <p><strong>Descripción:</strong> {{ florSeleccionada.descripcion }}</p>
+      <p><strong>Color:</strong> {{ florSeleccionada.color }}</p>
+      <p><strong>Familia:</strong> {{ florSeleccionada.familia }}</p>
+      <p><strong>Largo:</strong> {{ florSeleccionada.largo }}</p>
+      <p><strong>Variedad:</strong> {{ florSeleccionada.variedad }}</p>
+    </div>
+    <button class="close-btn" (click)="cerrarModal()">Cerrar</button>
+  </div>
+</div>
+
+
+
 <!-- Redesigned Add Flower Form -->
