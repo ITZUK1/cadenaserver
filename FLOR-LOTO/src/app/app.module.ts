@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { PantallaInicioComponent } from './components/pantalla-inicio/pantalla-inicio.component';
 import { PantallaVariedadComponent } from './components/pantalla-variedad/pantalla-variedad.component';
 import { PantallaFlorComponent } from './components/pantalla-flor/pantalla-flor.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { PantallaFlorComponent } from './components/pantalla-flor/pantalla-flor.
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule  // Agrega FormsModule aquí
+    FormsModule,
+    BrowserAnimationsModule  // Agrega FormsModule aquí
   ],
   providers: [],
   bootstrap: [AppComponent]
